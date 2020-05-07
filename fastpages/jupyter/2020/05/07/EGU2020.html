@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Sharing Geoscience Online | 4G Geodesy Geodynamics Galileo GNSS</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Sharing Geoscience Online" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal reflection on the EGU2020 session G3.2" />
+<meta property="og:description" content="Personal reflection on the EGU2020 session G3.2" />
+<link rel="canonical" href="https://coandrei.github.io/geo/fastpages/jupyter/2020/05/07/EGU2020.html" />
+<meta property="og:url" content="https://coandrei.github.io/geo/fastpages/jupyter/2020/05/07/EGU2020.html" />
+<meta property="og:site_name" content="4G Geodesy Geodynamics Galileo GNSS" />
+<meta property="og:image" content="https://coandrei.github.io/geo/images/some_folder/your_image.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-07T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Personal reflection on the EGU2020 session G3.2","@type":"BlogPosting","headline":"Sharing Geoscience Online","dateModified":"2020-05-07T00:00:00-05:00","datePublished":"2020-05-07T00:00:00-05:00","image":"https://coandrei.github.io/geo/images/some_folder/your_image.png","url":"https://coandrei.github.io/geo/fastpages/jupyter/2020/05/07/EGU2020.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://coandrei.github.io/geo/fastpages/jupyter/2020/05/07/EGU2020.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/geo/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://coandrei.github.io/geo/feed.xml" title="4G Geodesy Geodynamics Galileo GNSS" /><link rel="shortcut icon" type="image/x-icon" href="/geo/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Sharing Geoscience Online | 4G Geodesy Geodynamics Galileo GNSS</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Sharing Geoscience Online" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal reflection on the EGU2020 session G3.2" />
+<meta property="og:description" content="Personal reflection on the EGU2020 session G3.2" />
+<link rel="canonical" href="https://coandrei.github.io/geo/fastpages/jupyter/2020/05/07/EGU2020.html" />
+<meta property="og:url" content="https://coandrei.github.io/geo/fastpages/jupyter/2020/05/07/EGU2020.html" />
+<meta property="og:site_name" content="4G Geodesy Geodynamics Galileo GNSS" />
+<meta property="og:image" content="https://coandrei.github.io/geo/images/some_folder/your_image.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-07T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Personal reflection on the EGU2020 session G3.2","@type":"BlogPosting","headline":"Sharing Geoscience Online","dateModified":"2020-05-07T00:00:00-05:00","datePublished":"2020-05-07T00:00:00-05:00","image":"https://coandrei.github.io/geo/images/some_folder/your_image.png","url":"https://coandrei.github.io/geo/fastpages/jupyter/2020/05/07/EGU2020.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://coandrei.github.io/geo/fastpages/jupyter/2020/05/07/EGU2020.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://coandrei.github.io/geo/feed.xml" title="4G Geodesy Geodynamics Galileo GNSS" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script type="text/javascript">
+require.config({
+  paths: {
+    jquery: 'https://code.jquery.com/jquery-3.5.0.min',
+    plotly: 'https://cdn.plot.ly/plotly-latest.min'
+  },
+
+  shim: {
+    plotly: {
+      deps: ['jquery'],
+      exports: 'plotly'
+    }
+  }
+});
+</script>
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/geo/">4G Geodesy Geodynamics Galileo GNSS</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/geo/about/">About Me</a><a class="page-link" href="/geo/search/">Search</a><a class="page-link" href="/geo/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Sharing Geoscience Online</h1><p class="page-description">Personal reflection on the EGU2020 session G3.2</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-07T00:00:00-05:00" itemprop="datePublished">
+        May 7, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/geo/categories/#fastpages">fastpages</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/geo/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#sharing-geoscience-online">Sharing Geoscience Online</a></li>
+<li class="toc-entry toc-h1"><a href="#grabbing-the-opportunity">Grabbing the opportunity</a></li>
+<li class="toc-entry toc-h1"><a href="#geodesy-at-egu2020">Geodesy at EGU2020</a></li>
+<li class="toc-entry toc-h1"><a href="#g32-quick-numbers">G3.2: quick numbers</a></li>
+<li class="toc-entry toc-h1"><a href="#top-words-from-the-titles">Top words from the titles</a></li>
+<li class="toc-entry toc-h1"><a href="#wordcloud-from-the-abstracts">Wordcloud from the abstracts</a></li>
+</ul><h1 id="sharing-geoscience-online">
+<a class="anchor" href="#sharing-geoscience-online" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sharing Geoscience Online</h1>
+<p>In response to Covid19 pandemic, EGU2020 has decided to go virtual via the <a href="https://egu2020.eu/sharing_geoscience_online/sharing_geoscience_online.html"><b>Sharing Geoscience Online</b></a> experiment.
+The experiment embraces the main <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">FOSS</a> principles replacing software with science <strong>free and open science!</strong></p>
+
+<p>Abstracts and presentation materials are available online. Discussion is promoted via the public commenting option. Video links were not permitted but live, inter-active text-based session chat channels are organized for each individual session.</p>
+
+<p>There is a tonne of information one can find 
+on the event <a href="https://www.egu2020.eu/">EGU2020 website</a>.</p>
+
+<div class="alert alert-block alert-info">
+<b>Note:</b> I have never participated in such event. Now, I do have the opportunity to get first contact with the atmosphere. This is just awesome!</div>
+<p><br></p>
+
+<h1 id="grabbing-the-opportunity">
+<a class="anchor" href="#grabbing-the-opportunity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grabbing the opportunity</h1>
+<p><strong>Why?</strong></p>
+<ul>
+  <li>to communicate about science to general public</li>
+</ul>
+
+<p><strong>What?</strong></p>
+<ul>
+  <li>to attend one of the live text-based sessions</li>
+</ul>
+
+<p><strong>How?</strong></p>
+<ul>
+  <li>aggregate the session public information</li>
+  <li>produce representative visuals and/or takeaway points</li>
+  <li>practice public communication</li>
+</ul>
+
+<h1 id="geodesy-at-egu2020">
+<a class="anchor" href="#geodesy-at-egu2020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Geodesy at EGU2020</h1>
+<p>At EGU2020, <b>Geodesy (G)</b> discipline is divived in six main meeting themes:</p>
+
+<ul>
+  <li>G1 – Geodetic Theory and Algorithms</li>
+  <li>G2 – Reference Frames and Geodetic Observing Systems</li>
+  <li>G3 – Geodynamics and Earth Fluids</li>
+  <li>G4 – Satellite Gravimetry, Gravity and Magnetic Field Modeling</li>
+  <li>G5 – Geodetic Monitoring of the Atmosphere</li>
+  <li>G6 – General Sessions</li>
+</ul>
+
+<p>Each group includes 3 to 6 topical sessions.</p>
+
+<p>On Wednesday evening, I joined session G3.2 <a href="https://meetingorganizer.copernicus.org/EGU2020/displays/35331">Observing geophysical signals in the Climate and Earth System through Geodesy</a>. 
+​</p>
+
+<p>There were 150+ active users enrolled in the discussion chat. Coordination was lively and constructive. I found the session intensive, interactive and inspiring. 
+​</p>
+
+<p>With these goodies in my mood, I decided to have also some fun with <a href="https://www.python.org/">python</a> and <strong>exploratory analysis</strong> in a <a href="https://jupyter.org/">Jupyther notebook</a>. 
+​</p>
+
+<p>This is the outcome and I gladly share it with you in the EGU’s spirit of <strong>#shareEGU20</strong>.</p>
+
+<h1 id="g32-quick-numbers">
+<a class="anchor" href="#g32-quick-numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>G3.2: quick numbers</h1>
+<p>Session G3.2 included <strong>31</strong> displays, from which <strong>20</strong> uploaded presentation materials. <br>
+The displays accounted work from <strong>153</strong> authors.</p>
+
+<h1 id="top-words-from-the-titles">
+<a class="anchor" href="#top-words-from-the-titles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Top words from the titles</h1>
+<p>The word summary from the titles gives a quick indication what authors aimed to promote this year. Are these words significant and representative for the session?</p>
+
+<p>The top 5 most frequent words in the display titles are:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data, water, storage, global, GRACE
+</code></pre></div></div>
+
+<p>Bear in mind that <code>change</code> and <code>change<b>s</b></code> are considered two separate words here. I did not spend time to figure out how to handle plurals or third form of the verbs. We live with this aspect for now.</p>
+
+<p>All display titles and their associated EGU number are given below:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 EGU2020-10555
+Seasonal variation in water storage, vertical land motion and well levels: Implications for groundwater storage change in Central Valley
+==========
+2 EGU2020-19070
+Exploring meso-scale soil water and groundwater storage changes within the USA through a Bayesian combination of GRACE data with monthly 12.5 km model simulations
+==========
+3 EGU2020-6550
+The Central European droughts of 2018 and 2019 observed with GRACE-Follow-On
+==========
+4 EGU2020-20224
+Monitoring climate-driven and anthropogenic impacts on hydrology and agriculture in South-Eastern Australia in the 21st century
+==========
+5 EGU2020-20937
+The water storage change anomaly and its causes in the middle-lower reaches of Yangtze River basin
+==========
+6 EGU2020-21456
+Multi-Mission GNSS Radio Occultation Climate Data Records at the Jet Propulsion Laboratory
+==========
+7 EGU2020-6329
+Applying the ICA method to extract the potential signals in GNSS timeseries
+==========
+8 EGU2020-4643
+The rate and acceleration of the global mean sea level revisited
+==========
+9 EGU2020-193
+GRACE observing a small scale ocean mass increase in the Bohai Sea 
+==========
+10 EGU2020-3468
+Monitoring the AMOC with GRACE/GRACE-FO - How far can we push the spatial resolution?
+==========
+11 EGU2020-8196
+Application of spectra-temporal analysis methods to detect common signals in length of day, global sea level rise, global temperature data, and ENSO indices
+==========
+12 EGU2020-7733
+Surface deformations of a 3D elastic self-gravitating Earth
+==========
+13 EGU2020-19815
+A novel theoretical framework to estimate GIA from GPS and GRACE
+==========
+14 EGU2020-17390
+Significant temporal changes in glacio isostatic adjustment in Iceland during the 1950s to present
+==========
+15 EGU2020-15816
+Global geodetic parameters obtained from 14 years Lageos 1 Satellite Laser Ranging
+==========
+16 EGU2020-2646
+A new approach that utilizes the GNSS atmospheric delay gradient to monitor front-type heavy rain and typhoon-type heavy rain in 2019 in Japan.
+==========
+17 EGU2020-4502
+Evaluating short-term hydro-meteorological fluxes in global atmospheric reanalyses using daily GRACE data
+==========
+18 EGU2020-5802
+How uncertain is the hydrological contribution to global sea level based on hydrological modelling compared to observational data?
+==========
+19 EGU2020-6125
+Anthropogenic water depletion in the Indo-Gangetic Plain
+==========
+20 EGU2020-7196
+Analyzing different ways of assimilating volume change estimates for surface water bodies into a hydrological model
+==========
+21 EGU2020-7999
+Improving the representation of ice-sheet mass changes in the global inversion for sea-level contributions
+==========
+22 EGU2020-8162
+Developing geodetic tools for early warning and monitoring of tectonic activity at the Gulf of Cadiz
+==========
+23 EGU2020-7652
+Mitigating Spatial Leakage in Monthly GRACE/GRACE-FO Gravity Fields for the Separation of Barystatic Sea-Level Variations and Residual Ocean Circulation Effects
+==========
+24 EGU2020-12944
+On the separation of co- and post-seismic signals due to large earthquakes from GRACE observations
+==========
+25 EGU2020-10437
+The Intriguing Relation Between Earth's Rotation, Geomagnetic Field, and Climate at Multidecadal Time Scales: Insights from NCEP 20th Century Reanalysis
+==========
+26 EGU2020-10684
+Investigating Granger causality with state-space representation of time series: a case study of the total water storage anomaly over Australia
+==========
+27 EGU2020-13554
+Analysis of groundwater storage changes in main Polish river basins using GRACE observations, in-situ data, and hydrological and climate models
+==========
+28 EGU2020-21943
+Data pre-processing for ionosphere TEC retrieval based on DORIS observations
+==========
+29 EGU2020-3512
+Small-Scale Signal in Mean Dynamic Topographies Applying Combined Geoid Models
+==========
+30 EGU2020-931
+What is the relationship between water storage change and NDVI?
+==========
+31 EGU2020-10369
+Geocenter Motion from a Combination of GRACE Mascon and SLR Data
+==========
+</code></pre></div></div>
+
+<h1 id="wordcloud-from-the-abstracts">
+<a class="anchor" href="#wordcloud-from-the-abstracts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wordcloud from the abstracts</h1>
+<p>With the above in mind, let’s see next how the word frequency looks when looking into the content of the abstracts. The top 10 words in the abstracts looks like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. water (63)
+2. data (60)
+3. grace (58)
+4. global (45)
+5. time (41)
+6. mass (38)
+7. storage (36)
+8. climate (34)
+9. observations (33)
+10. changes (31)
+</code></pre></div></div>
+
+<p><strong>Water</strong> and <strong>data</strong> switch places this time. <br>
+<strong>GRACE</strong> and <strong>global</strong> are still on top 5. <br>
+<strong>Time</strong> comes now on 5th. <br>
+<strong>Change</strong> breaks into top 5 if we count change and changes as one word. <br>
+Insightful, isn’t it?</p>
+
+<p>But what about a visual? This is what we get if we translate the frequency numbers into a <strong>wordcloud</strong> visual representation:</p>
+
+<p><img src="/images/egu2020_g32_wordcloud.jpg" height="400" title="EGU2020 session G3.2 wordcloud"></p>
+
+<p>Awesome! I posted the wordcloud on Twitter in real-time during the meeting. EGU_Geodesy draw a nice summary statement:</p>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Such a great idea! <br><br>Then, would this be a good summary of the session (with changed order of the words)?<br><br><a href="https://twitter.com/hashtag/Global?src=hash&amp;ref_src=twsrc%5Etfw">#Global</a> <a href="https://twitter.com/hashtag/water?src=hash&amp;ref_src=twsrc%5Etfw">#water</a> <a href="https://twitter.com/hashtag/mass?src=hash&amp;ref_src=twsrc%5Etfw">#mass</a> changes over <a href="https://twitter.com/hashtag/time?src=hash&amp;ref_src=twsrc%5Etfw">#time</a> can be observed with <a href="https://twitter.com/hashtag/GRACE?src=hash&amp;ref_src=twsrc%5Etfw">#GRACE</a>. These <a href="https://twitter.com/hashtag/data?src=hash&amp;ref_src=twsrc%5Etfw">#data</a> are relevant for understanding our <a href="https://twitter.com/hashtag/climate?src=hash&amp;ref_src=twsrc%5Etfw">#climate</a><a href="https://twitter.com/hashtag/shareEGU20?src=hash&amp;ref_src=twsrc%5Etfw"> #shareEGU20</a> <a href="https://twitter.com/hashtag/shareEGU20_G?src=hash&amp;ref_src=twsrc%5Etfw"> #shareEGU20_G</a><br><a href="https://t.co/MYyfIou0at">https://t.co/MYyfIou0at</a></p>— EGU Geodesy (@EGU_Geodesy) <a href="https://twitter.com/EGU_Geodesy/status/1258056682548146176?ref_src=twsrc%5Etfw">May 6, 2020</a>
+</blockquote>
+<p><br></p>
+
+<p>This short blog was derived from the jupyther notebook hosted on github <a href="https://github.com/coandrei/jupyter_notebooks/blob/master/egu2020/g32.ipynb">here</a>.</p>
+
+<p>Indeed, an inspiring and fun evening. <strong>Open science is awesome!</strong>. 
+<br>Thank you EGU2020!</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="coandrei/geo"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/geo/fastpages/jupyter/2020/05/07/EGU2020.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/geo/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/geo/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/geo/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Personal blogs on the geodesy, geodynamics, galileo, gnss, automation, data science and other things I ❤.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/coandrei" title="coandrei"><svg class="svg-icon grey"><use xlink:href="/geo/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/coandrei" title="coandrei"><svg class="svg-icon grey"><use xlink:href="/geo/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
